@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "news-ul":"/components/newsul/newsul"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+
+}

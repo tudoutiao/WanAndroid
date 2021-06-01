@@ -1,0 +1,21 @@
+<!--components/newsLi/newsLi.wxml-->
+
+<wxs src="../../wxs/common.wxs" module="common"></wxs>
+
+
+<view class="{{article.isTop?'news-li-top':'news-li'}}">
+  <navigator class="news-item" url="{{article.link}}" >
+    <view class="news_avatar_con">
+      <image class="news-src-avatar" src="{{common.getRandomUrl(20,20,'{article.author}')}}"></image>
+      <view class="news-src-name">{{article.author}}</view>
+      <view class="news-src_time">{{article.niceDate}}</view>
+    </view>
+    <text class="news-text-con" decode="true">{{article.title}}</text>
+    <view class="news-bottom-con">
+      <text class="news-bottom-top" hidden="{{!article.isTop}}">置顶</text>
+      <text class="news-bottom-type">{{article.superChapterName}} · {{article.chapterName}}</text>
+      <image class="news-bottom-save" src="{{article.collect?'/images/icon/icon_fav_sel.png':'/images/icon/icon_fav.png'}}"></image>
+    </view>  
+  </navigator>
+
+</view>

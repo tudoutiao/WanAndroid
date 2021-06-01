@@ -1,0 +1,10 @@
+/* components/newsul/newsul.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+
+.container {
+  border-top: 1rpx solid #f7f7f7;
+}

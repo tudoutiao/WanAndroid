@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/project/project",
+    "pages/article/article",
+    "pages/tree/tree",
+    "pages/my/my"
+  ],
+  "window":{
+    "navigationBarTitleText": "玩Android",
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f7f7f7"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+
+  "tabBar": {
+    "backgroundColor": "#f7f7f7",
+    "color": "#707070",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon/home_light.png",
+        "selectedIconPath": "/images/icon/home_fill_light.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "/images/icon/sort_light.png",
+        "selectedIconPath": "/images/icon/sort.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/icon/my.png",
+        "selectedIconPath": "/images/icon/my_fill.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

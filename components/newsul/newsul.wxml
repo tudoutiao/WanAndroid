@@ -1,0 +1,12 @@
+<!--article item layout-->
+
+<view class="container">
+  <view class="page flex">
+      <view  wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article" wx:key="id">
+        <!-- <navigator url="/pages/comments/comments" hover-class="navigator-hover"> -->
+          <news-li article="{{article}}"></news-li>
+        <!-- </navigator> -->
+      </view>
+  </view>
+</view>
+
