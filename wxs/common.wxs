@@ -1,8 +1,10 @@
-var getRandomUrl= function(width,height,key){
+ var getRandomUrl= function(width,height,key){
   return 'http://placeimg.com/'+width+'/'+height+'/'+loseCode(key)
-}
+} 
 
 var loseCode = function(str){
+    if(null==str||str=="")
+    return str;
     var hash = 0;
     for (i = 0; i < str.length; i++) {
         char = str.charCodeAt(i);
@@ -13,5 +15,5 @@ var loseCode = function(str){
 
 
 module.exports = {
-  getRandomUrl: getRandomUrl
+  getRandomUrl: getRandomUrl,
 }

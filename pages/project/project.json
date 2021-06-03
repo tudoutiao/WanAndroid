@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "news-ul":"/components/newsul/newsul",
+    "tab-page":"/components/tabpage/tabpage"
+  },
+  "onReachBottomDistance": 50
 }

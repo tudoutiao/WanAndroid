@@ -2,11 +2,16 @@
 
 <view class="container">
   <view class="page flex">
-      <view  wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article" wx:key="id">
-        <!-- <navigator url="/pages/comments/comments" hover-class="navigator-hover"> -->
-          <news-li article="{{article}}"></news-li>
-        <!-- </navigator> -->
+    <view wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article" wx:key="id">
+      <!-- <navigator url="/pages/comments/comments" hover-class="navigator-hover"> -->
+      <view wx:if="{{type==0}}">
+        <news-li article="{{article}}"></news-li>
       </view>
+      <view wx:else>
+        <projects-li article="{{article}}"></projects-li>
+      </view>
+
+      <!-- </navigator> -->
+    </view>
   </view>
 </view>
-

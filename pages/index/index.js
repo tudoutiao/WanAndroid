@@ -23,18 +23,19 @@ Page({
     wx.request({
       url: domain + '/banner/json',
       success: res => {
-        console.log(res)
+        // console.log(res)
         this.setData({
           bannerData: res.data.data
         })
       }
     })
   },
+  //置顶
   getTopList() {
     wx.request({
       url: domain + '/article/top/json',
       success: res => {
-        console.log(res)
+        // console.log(res)
         var list=res.data.data
         for(var i=0;i<list.length;i++){
           list[i].isTop=true
@@ -50,7 +51,7 @@ Page({
     wx.request({
       url: domain+`/article/list/${page}/json`,
       success:res=>{
-        console.log(res.data)
+        // console.log(res.data)
         var datas=res.data.data.datas
         this.setData({
           fetchArticles:datas,

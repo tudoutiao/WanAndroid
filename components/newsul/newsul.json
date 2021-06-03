@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "news-li":"/components/newsli/newsli"
+    "news-li":"/components/newsli/newsli",
+    "projects-li":"/components/projectsli/projectsli"
   }
 }

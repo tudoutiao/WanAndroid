@@ -1,2 +1,26 @@
-<!--pages/project/project.wxml-->
-<text>pages/project/project.wxml</text>
+<view class="container">
+  <view class="nav-view">
+    <!-- tab导航栏 -->
+    <!-- scroll-left属性可以控制滚动条位置 -->
+    <!-- scroll-with-animation滚动添加动画过渡 -->
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+      <block wx:for="{{navDataList}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+        <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+         <text decode="true">{{navItem.name}}</text>
+         </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="content-view">
+    <!-- 页面内容 -->
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+        <swiper-item wx:for="{{navDataList.length}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+          <tab-page id="tab-page-{{currentTab}}" navData="{{tabItem}}"></tab-page>
+        </swiper-item>
+    </swiper>
+  </view>
+
+
+
+</view>

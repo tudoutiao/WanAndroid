@@ -1,0 +1,4 @@
+<!--components/tabpage/tabpage.wxml-->
+<view>
+  <news-ul articles="{{projectList}}" type="1"></news-ul>
+</view>

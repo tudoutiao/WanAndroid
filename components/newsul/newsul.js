@@ -7,7 +7,12 @@ Component({
     articles:{
       type:Array,
       value:[],
+    },
+    type:{
+      type:Number,
+      value:0,
     }
+
     
   },
   observers:{//数据监听器，监听属性或内部数据得变化。替换properties中的observer
@@ -23,7 +28,14 @@ Component({
   data: {
 
   },
-
+  pageLifetimes: {
+    // 组件所在页面的生命周期函数
+    show: function () { 
+      console.log(this)
+    },
+    hide: function () { },
+    resize: function () { },
+  },
   /**
    * 组件的方法列表
    */
